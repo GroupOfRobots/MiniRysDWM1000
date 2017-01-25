@@ -6124,14 +6124,6 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <text x="-2.54" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
 <pin name="+5V" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
 </symbol>
-<symbol name="+12V">
-<wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
-<wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
-<wire x1="1.27" y1="-0.635" x2="0" y2="1.27" width="0.254" layer="94"/>
-<wire x1="0" y1="1.27" x2="-1.27" y2="-0.635" width="0.254" layer="94"/>
-<text x="-2.54" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
-<pin name="+12V" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
-</symbol>
 <symbol name="+3V3">
 <wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
 <wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
@@ -6157,19 +6149,6 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="1" symbol="+5V" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="+12V" prefix="P+">
-<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
-<gates>
-<gate name="1" symbol="+12V" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -8103,7 +8082,6 @@ DIN A4, landscape with location and doc. field</description>
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
 <part name="P+11" library="supply1" deviceset="+5V" device=""/>
 <part name="+3V5" library="supply1" deviceset="+3V3" device=""/>
-<part name="P+10" library="supply1" deviceset="+12V" device=""/>
 <part name="P+13" library="supply1" deviceset="+5V" device=""/>
 <part name="R1" library="rcl" deviceset="R-EU_" device="R0603" value="10k"/>
 <part name="R2" library="rcl" deviceset="R-EU_" device="R0603" value="330R"/>
@@ -8130,7 +8108,6 @@ DIN A4, landscape with location and doc. field</description>
 <instance part="GND14" gate="1" x="76.2" y="81.28"/>
 <instance part="P+11" gate="1" x="76.2" y="109.22"/>
 <instance part="+3V5" gate="G$1" x="78.74" y="63.5"/>
-<instance part="P+10" gate="1" x="152.4" y="63.5"/>
 <instance part="P+13" gate="1" x="160.02" y="63.5"/>
 <instance part="R1" gate="G$1" x="17.78" y="35.56" rot="R90"/>
 <instance part="R2" gate="G$1" x="22.86" y="20.32" rot="R90"/>
@@ -8150,11 +8127,6 @@ DIN A4, landscape with location and doc. field</description>
 <pinref part="JP1" gate="A" pin="14"/>
 <wire x1="147.32" y1="50.8" x2="152.4" y2="50.8" width="0.1524" layer="91"/>
 <label x="152.4" y="50.8" size="1.016" layer="95" xref="yes"/>
-</segment>
-<segment>
-<pinref part="JP2" gate="A" pin="4"/>
-<wire x1="129.54" y1="45.72" x2="116.84" y2="45.72" width="0.1524" layer="91"/>
-<label x="116.84" y="45.72" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="VSS@1"/>
@@ -8204,15 +8176,6 @@ DIN A4, landscape with location and doc. field</description>
 <junction x="25.4" y="2.54"/>
 </segment>
 </net>
-<net name="+12V" class="0">
-<segment>
-<pinref part="JP1" gate="A" pin="15"/>
-<wire x1="147.32" y1="53.34" x2="152.4" y2="53.34" width="0.1524" layer="91"/>
-<label x="152.4" y="53.34" size="1.016" layer="95" xref="yes"/>
-<pinref part="P+10" gate="1" pin="+12V"/>
-<wire x1="152.4" y1="53.34" x2="152.4" y2="60.96" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="+5V" class="0">
 <segment>
 <pinref part="LED1" gate="G$1" pin="VDD"/>
@@ -8243,13 +8206,6 @@ DIN A4, landscape with location and doc. field</description>
 <label x="116.84" y="43.18" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="NRST" class="0">
-<segment>
-<pinref part="JP1" gate="A" pin="13"/>
-<wire x1="147.32" y1="48.26" x2="152.4" y2="48.26" width="0.1524" layer="91"/>
-<label x="152.4" y="48.26" size="1.016" layer="95" xref="yes"/>
-</segment>
-</net>
 <net name="CSN" class="0">
 <segment>
 <pinref part="JP1" gate="A" pin="7"/>
@@ -8262,13 +8218,6 @@ DIN A4, landscape with location and doc. field</description>
 <label x="27.94" y="55.88" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="AREF" class="0">
-<segment>
-<pinref part="JP1" gate="A" pin="3"/>
-<wire x1="147.32" y1="22.86" x2="160.02" y2="22.86" width="0.1524" layer="91"/>
-<label x="160.02" y="22.86" size="1.016" layer="95" xref="yes"/>
-</segment>
-</net>
 <net name="SCK" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="SPICLK"/>
@@ -8279,13 +8228,6 @@ DIN A4, landscape with location and doc. field</description>
 <pinref part="JP1" gate="A" pin="8"/>
 <wire x1="147.32" y1="35.56" x2="160.02" y2="35.56" width="0.1524" layer="91"/>
 <label x="160.02" y="35.56" size="1.016" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="NRST1" class="0">
-<segment>
-<pinref part="JP2" gate="A" pin="3"/>
-<wire x1="129.54" y1="48.26" x2="116.84" y2="48.26" width="0.1524" layer="91"/>
-<label x="116.84" y="48.26" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="SDA" class="0">
@@ -8331,13 +8273,6 @@ DIN A4, landscape with location and doc. field</description>
 <pinref part="JP1" gate="A" pin="9"/>
 <wire x1="147.32" y1="38.1" x2="160.02" y2="38.1" width="0.1524" layer="91"/>
 <label x="160.02" y="38.1" size="1.016" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="MLDIR" class="0">
-<segment>
-<pinref part="JP1" gate="A" pin="1"/>
-<wire x1="147.32" y1="17.78" x2="160.02" y2="17.78" width="0.1524" layer="91"/>
-<label x="160.02" y="17.78" size="1.016" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="DWMRES" class="0">
