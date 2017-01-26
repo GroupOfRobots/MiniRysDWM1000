@@ -8279,6 +8279,7 @@ DIN A4, landscape with location and doc. field</description>
 <segment>
 <pinref part="U1" gate="G$1" pin="RSTN"/>
 <wire x1="35.56" y1="45.72" x2="27.94" y2="45.72" width="0.1524" layer="91"/>
+<label x="27.94" y="45.72" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="JP1" gate="A" pin="11"/>
@@ -8330,6 +8331,7 @@ DIN A4, landscape with location and doc. field</description>
 <wire x1="35.56" y1="43.18" x2="17.78" y2="43.18" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="17.78" y1="43.18" x2="17.78" y2="40.64" width="0.1524" layer="91"/>
+<label x="17.78" y="43.18" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="JP1" gate="A" pin="6"/>
